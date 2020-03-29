@@ -57,21 +57,6 @@ describe('Testing Facebook searching people', () => {
         assert.equal(popUpWindow,'Опубликовано на Странице pasha_chorniy.');
         const linkToPage = await $('._4-i2 a');
         linkToPage.click();
-        await browser.pause(1000);
-s
-        // const Chevrolet = await $$('._1x2_.img');
-        // await Chevrolet[1].scrollIntoView();
-
     })
-
-
-
-    // it('I demonstrate the name of group', async () => {
-    //     const elem = await $('');
-    //     const name = await elem.getText();
-    //     assert.equal(name,'Факти про Україну та Світ');
-    // })
-
+ 
     })
-
-    // ._4-i2._pig._50f4 a
