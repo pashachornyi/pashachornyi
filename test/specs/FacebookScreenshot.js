@@ -1,5 +1,4 @@
 const assert = require('assert')
-
 describe('Testing Facebook searching people', () => {
     it('I open Facebook autorization form', () => {
         browser.url('/')
@@ -42,14 +41,16 @@ describe('Testing Facebook searching people', () => {
     it('I press the name of friend that i need', async () => {
         const icon = await $$('._4ik5 > a');
         icon[1].click();
-        browser.pause(2000);
+        browser.pause(1000);
     })
     it('Scroll to photo that i need', async () => {
-        const photo = await $('._2pid._2pin._52jv');
-        await photo.scrollIntoView();
+        const photo = await $('._3l3x');
+        await photo.scrollIntoView({ block: 'center' });
+        browser.pause(2000);
     })
     it('Scroll to photo that i need', () => {
-        browser.saveScreenshot('/home/pasha/Desktop/facebook.png');
+        const reportTime = (new Date().toLocaleTimeString());
+        browser.saveScreenshot(`screens/${reportTime}.png`);
     })
 
 })
