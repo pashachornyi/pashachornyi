@@ -37,14 +37,15 @@ describe('Testing Facebook searching people', () => {
     it('I press "Find" button', () => {
         const searchFriendsButton = $('form > ._42ft._4jy0._4w98');
         searchFriendsButton.click();
+        browser.pause(3000);
     })
-    it('I press the name of friend that i need', () => {
-        const icon = $('a[href*="264&ref"]:last-child');
-        icon.click();
-        browser.pause(4000);
+    it('I press the name of friend that i need', async () => {
+        const icon = await $$('._4ik5 > a');
+        icon[1].click();
+        browser.pause(2000);
     })
     it('Scroll to photo that i need', async () => {
-        const photo = await $('._3l3x');
+        const photo = await $('._2pid._2pin._52jv');
         await photo.scrollIntoView();
     })
     it('Scroll to photo that i need', () => {
