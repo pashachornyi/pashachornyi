@@ -1,5 +1,5 @@
 const assert = require('assert')
-
+let result = []
 describe('Testing registration form', () => {
     it('I open Facebook autorization form', () => {
         browser.url('/')
@@ -30,13 +30,22 @@ describe('Testing registration form', () => {
         myButton.click();
         browser.pause(2000);
     })
-    it('Demonstrate friends groups name', () => {
-        const document = $$('.mfclru0v._4ik4._4ik5 > span');
-        console.log(document)
-        // let list = await document.querySelectorAll('.mfclru0v._4ik4._4ik5 > span')
-        // console.log (list)
-        // const element = document.querySelectorAll('.mfclru0v._4ik4._4ik5 > span')
-        // list.forEach(span=>console.log(span.innerText))
-    })
+    // it('Demonstrate friends groups name', () => {
+    //     const arr = $$('.mfclru0v._4ik4._4ik5');
+    //     arr.forEach(function(element, index)  { 
+    //         if (index <= 3) {
+    //             console.log(element.$('span').getText())
+    //         }
+    //     })    
+    // })
+    it('Write array', () => {
+        const arr = $$('.mfclru0v._4ik4._4ik5');
+        arr.forEach(function(element, index) { 
+            if (index <= 3) {
+        result.push(element.$('span').getText())
+        console.log(result)
+    }
 
+})
+})
 })
